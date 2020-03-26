@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Flower's Shop</title>
+  <meta charset='UTF-8'>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/app.css">
+  <link href="https://fonts.googleapis.com/css?family=Nanum+Myeongjo|Satisfy&display=swap" rel="stylesheet">
+</head>
+<body>
+  <section id='top-Connect'>
+    <div>
+      <a href='#'><span class='link-word'>Facebook</span><span class='link-img'><img src='images/icons/facebook.svg' alt='Facebook-icon'></span></a>
+      <a href='#'><span class='link-word'>Instgram</span> <span class='link-img'><img src='images/icons/instagram-logo.svg' alt='Facebook-icon'></span></a>
+      <a href='#'><span class='link-word'>Twitter</span> <span class='link-img'><img src='images/icons/twitter-logo-silhouette.svg' alt='Facebook-icon'></span></a>
+    </div>
+    <a href="tel:+20123456789">☏+20123465738</a>
+  </section>
+  <section id='top-name'>
+    <p>Flowers</p>
+    <div>✿</div>
+  </section>
+  <nav id='nav'>
+    <div id='toggle-nav-icon' onclick="navIcon(this)">
+      <div class='top-bar'></div>
+      <div class='bottom-bar'></div>
+    </div>
+    <div id='logo'>Flower<span>❀</span></div>
+    <div id='links'>
+      <a href='#form'>For special requests<span class='link-line'></span></a>
+      <a href='#numbers-of-images'>about<span class='link-line'></span></a>
+    </div>
+    <div id='shopping'>
+      <span>0</span>
+      <img src="images/icons/flower.svg"/>
+    </div>
+  </nav>
+  <div id='message'></div>  <!--Show a message if the basket is empty when clicked, or if an item is added twice-->
+  <div id='shopping-basket'>  <!-- Show selected roses -->
+  <div id='close-icon' onclick="closeBasket()">✘</div>
+    <div id='operation'>
+      <div id='items-left'></div>
+      <div id='prices-right'>
+        <div id='left-line'></div> <!--just for design-->
+        <div id='prices'></div>
+        <div id='total-price'>
+          <p>Total price <input id='checkbox' onclick="totalPrice(this)" type="checkbox"></p>
+          <p id='tot'></p>
+          <button id='buy'>buy</button>
+          <div id='method'>
+            <img src='images/icons/maestro.svg' alt='maestro-icon'>
+            <img src='images/icons/mastercard.svg' alt='mastercard-icon'>
+            <img src='images/icons/visa.svg' alt='visa-icon'>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <main>
+    <p><span>Welcome to the flower shop</span><br>We have a group of the most beautiful and wonderful types of flowers</p>
+    <a href='#container-of-colors' id='top-arrow'>›</a>
+  </main>
+  <section id='container-of-colors'>
+    <p class="small-desc">Sorted by color</p>
+    <div id='colors'>
+      <div id='left-choose'>
+        <p id='word-red'>Red</p>
+        <p id='word-orange'>Orange</p>
+        <p id='word-yellow'>Yellow</p>
+        <p id='word-green'>Green</p>
+        <p id='word-blue'>Blue</p>
+        <p id='word-purple'>Purple</p>
+        <p id='word-white'>White</p>
+      </div>
+      <div id='right-choose'>
+        <div id='red'>
+          <div>
+            <p id='price'>10 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash (12).jpg' alt='red image'>
+          </div>
+          <div>
+            <p id='price'>10 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash (7).jpg' alt='red image'>
+          </div>
+          <div>
+            <p id='price'>10 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash (9).jpg' alt='red image'>
+          </div>
+          <div>
+            <p id='price'>10 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash (4).png' alt='red image'>
+          </div>
+          <div>
+            <p id='price'>10 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash (7).jpg' alt='red image'>
+          </div>
+        </div>
+        <div id='yellow'>
+          <div>
+            <p id='price'>5 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash (3).jpg' alt='yellow image'>
+          </div>
+          <div>
+            <p id='price'>5 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash (3).png' alt='yellow image'>
+          </div>
+          <div>
+            <p id='price'>5 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash.png' alt='yellow image'>
+          </div>
+        </div>
+        <div id='orange'>
+          <div>
+            <p id='price'>9 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash (1).png' alt='orange image'>
+          </div>
+          <div>
+            <p id='price'>9 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash (2).png' alt='orange image'>
+          </div>
+          <div>
+            <p id='price'>9 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/eric-prouzet-yutEmbHWAvM-unsplash.jpg' alt='orange image'>
+          </div>
+        </div>
+        <div id='green'>
+          <div>
+            <p id='price'>4 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash (11).jpg' alt='green image'>
+          </div>
+          <div>
+            <p id='price'>4 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash (2).jpg' alt='green image'>
+          </div>
+          <div>
+            <p id='price'>4 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash (6).jpg' alt='green image'>
+          </div>
+          <div>
+            <p id='price'>4 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash (6).jpg' alt='green image'>
+          </div>
+          <div>
+            <p id='price'>4 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash (2).jpg' alt='green image'>
+          </div>
+        </div>
+        <div id='blue'>
+          <div>
+            <p id='price'>10 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash (10).jpg' alt='blue image'>
+          </div>
+          <div>
+            <p id='price'>10 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/vera-gorbunova-miNvAb0c8w4-unsplash.jpg' alt='blue image'>
+          </div>
+          <div>
+            <p id='price'>10 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash (5).jpg' alt='blue image'>
+          </div>
+          <div>
+            <p id='price'>10 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/vera-gorbunova-miNvAb0c8w4-unsplash.jpg' alt='blue image'>
+          </div>
+          <div>
+            <p id='price'>10 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash (5).jpg' alt='blue image'>
+          </div>
+        </div>
+        <div id='purple'>
+          <div>
+            <p id='price'>10 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash (8).jpg' alt='purple image'>
+          </div>
+          <div>
+            <p id='price'>10 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash (13).jpg' alt='purple image'>
+          </div>
+          <div>
+            <p id='price'>10 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash (4).png' alt='purple image'>
+          </div>
+          <div>
+            <p id='price'>10 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash (13).jpg' alt='purple image'>
+          </div>
+          <div>
+            <p id='price'>10 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash (8).jpg' alt='purple image'>
+          </div>
+        </div>
+        <div id='white'>
+          <div>
+            <p id='price'>30 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash.jpg' alt='white image'>
+          </div>
+          <div>
+            <p id='price'>30 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash (4).jpg' alt='white image'>
+          </div>
+          <div>
+            <p id='price'>30 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash (1).jpg' alt='white image'>
+          </div>
+          <div>
+            <p id='price'>30 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash (4).jpg' alt='white image'>
+          </div>
+          <div>
+            <p id='price'>30 $ +</p>
+            <p id="description">some text ,some text ,some text .......</p>
+            <img src='images/tomoko-uji-Om0t52bxlTA-unsplash.jpg' alt='white image'>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id='container-of-bouquets'>
+    <p class="small-desc">We have a variety of distinct bouquets</p>
+    <div id='container-of-images'>
+      <div class='image'>
+      	<div id='small-dec-and-pri'>
+          <p id='price'>1 $ +</p>
+          <p class='dec'>***** ****** ***</p>
+        </div>
+      <img src='images/4537_LAY.jpeg' alt='bouquet of flower'>
+      </div>
+      <div class='image'>
+        <div id='small-dec-and-pri'>
+          <p id='price'>1 $ +</p>
+          <p class='dec'>***** ****** ***</p>
+        </div>
+        <img src='images/4539_LAY.jpeg' alt='bouquet of flower'>
+      </div>
+      <div class='image'>
+        <div id='small-dec-and-pri'>
+          <p id='price'>1 $ +</p>
+          <p class='dec'>***** ****** ***</p>
+        </div>
+        <img src='images/6103_LAY.jpeg' alt='bouquet of flower'>
+      </div>
+      <div class='image'>
+        <div id='small-dec-and-pri'>
+          <p id='price'>1 $ +</p>
+          <p class='dec'>***** ****** ***</p>
+        </div>
+        <img src='images/30003887_LAY.jpeg' alt='bouquet of flower'>
+      </div>
+      <div class='image'>
+        <div id='small-dec-and-pri'>
+          <p id='price'>1 $ +</p>
+          <p class='dec'>***** ****** ***</p>
+        </div>
+        <img src='images/30007596_LAY.jpeg' alt='bouquet of flower'>
+      </div>
+      <div class='image'>
+        <div id='small-dec-and-pri'>
+          <p id='price'>1 $ +</p>
+          <p class='dec'>***** ****** ***</p>
+        </div>
+        <img src='images/30007597_LAY.jpeg' alt='bouquet of flower'>
+      </div>
+      <div class='image'>
+        <div id='small-dec-and-pri'>
+          <p id='price'>1 $ +</p>
+          <p class='dec'>***** ****** ***</p>
+        </div>
+        <img src='images/30010137_LAY.jpeg'  alt='bouquet of flower'>
+      </div>
+      <div class='image'>
+        <div id='small-dec-and-pri'>
+          <p id='price'>1 $ +</p>
+          <p class='dec'>***** ****** ***</p>
+        </div>
+        <img src='images/30047878_LAY.jpeg' alt='bouquet of flower'>
+      </div>
+      <div class='image'>
+        <div id='small-dec-and-pri'>
+          <p id='price'>1 $ +</p>
+          <p class='dec'>***** ****** ***</p>
+        </div>
+        <img src='images/30261478_LAY.jpeg' alt='bouquet of flower'>
+      </div>
+    </div>
+    <a href="#container-of-bouquets"><div id='numbers-of-images'>
+      <span id='left-arrow'>‹</span>
+      <span class='dots' id='first-dot'>...</span>
+      <span id='first'>1</span>
+      <span id='second'>2</span>
+      <span id='third'>3</span>
+      <span class='dots' id='last-dot'>...</span>
+      <span id='total'></span>
+      <span id='right-arrow'>›</span>
+    </div>
+    </a>
+  </section>
+  <section id='people-comment'>
+    <p id='disc-comment'>Our customers say</p>
+    <div id='comment'>
+      <p>❝ One of the most wonderful stores that dealt with ❞</p>
+      <p>❝ I never imagined that I would find these wonderful roses with you ❞</p>
+      <p>❝ I advise everyone to do business with them and it can provide you with special requests ❞</p>
+    </div>
+    <div id='arrow-comment'>
+      <span id='a0'></span>
+      <span id='b1'></span>
+      <span id='c2'></span>
+    </div>
+  </section>
+  <form id='form' action="#">
+    <p class="small-desc">Connect with us</p>
+    <div>
+      <lable>
+        <input type='text' placeholder="Your Name ..." required><br></br>
+        <input type="email" placeholder="Your email ..." required>
+      </lable>
+      <textarea required placeholder="write some words ..."></textarea>
+    </div>
+    <button type="submit">Send</button>
+  </form>
+  <footer>Made with love from <a href='#'>" Khaled Nassar ♥ "</a></footer>
+  <script src='javascript/app.js'></script>
+</body>
+</html>
